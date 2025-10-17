@@ -273,6 +273,14 @@ body {
     opacity: 0.9;
 }
 
+/* Mobile social icons positioning */
+.mobile-social {
+    display: none;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
 /* Section Styles */
 section {
     padding: 5rem 0;
@@ -686,6 +694,14 @@ section {
         grid-template-columns: 1fr;
         text-align: center;
         gap: 2rem;
+    }
+
+    .hero-social {
+        display: none;
+    }
+
+    .mobile-social {
+        display: flex;
     }
 
     .hero-title {
