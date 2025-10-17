@@ -51,6 +51,13 @@ body {
     text-decoration: none;
 }
 
+/* Site logo image in navbar */
+.logo-img {
+    height: 32px;
+    width: auto;
+    display: block;
+}
+
 .nav-menu {
     display: flex;
     list-style: none;
