@@ -801,3 +801,13 @@ section {
         scroll-behavior: smooth;
     }
 }
+
+.skills-toggle-wrap { margin-top: 1rem; text-align: center; }
+.skills-toggle { border-color: #4F46E5; color: #4F46E5; background: transparent; }
+.skills-toggle:hover { background: #4F46E5; color: #fff; }
+
+/* Collapsible skills on mobile to reduce overwhelm */
+@media (max-width: 768px) {
+    .skills-more { display: none; }
+    .skills-more.expanded { display: block; }
+}
