@@ -1857,3 +1857,18 @@ footer {
     .hero .hero-social { display: none !important; }
     .mobile-social { display: flex; }
 }
+
+/* Mobile hero quick info */
+.hero-quick { margin-top: 1rem; display: none; }
+.hero-quick .quick-row { display: flex; gap: .5rem; flex-wrap: wrap; justify-content: center; margin-top: .5rem; }
+.chip { display: inline-flex; align-items: center; gap: .4rem; padding: .35rem .6rem; border-radius: 999px; background: var(--glass-bg); border: 1px solid var(--glass-border); color: var(--text-primary); font-size: .85rem; }
+.chip i { font-size: .85rem; }
+.chip.success { background: rgba(16,185,129,.15); border-color: rgba(16,185,129,.25); }
+.chip.muted { background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.08); color: var(--text-secondary); }
+.chip.link { text-decoration: none; }
+
+@media (max-width: 768px) {
+    .hero-quick { display: block; }
+    .hero { padding-top: 120px; padding-bottom: 48px; }
+    .cta-buttons { gap: .75rem; }
+}
