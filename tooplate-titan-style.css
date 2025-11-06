@@ -1808,3 +1808,32 @@ footer {
     .hero { padding: 100px 1rem 60px; }
     .container { padding: 0 1rem; }
 }
+
+.mobile-social {
+    display: none;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.mobile-social .social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--glass-bg);
+    color: var(--text-primary);
+    text-decoration: none;
+    box-shadow: 0 8px 24px var(--glass-shadow);
+}
+
+.mobile-social .social-link:hover {
+    background: var(--glass-bg-strong);
+}
+
+@media (max-width: 768px) {
+    .hero .hero-social { display: none !important; }
+    .mobile-social { display: flex; }
+}
