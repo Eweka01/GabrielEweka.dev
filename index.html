@@ -3,240 +3,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eweka Gabriel - DevOps Engineer & Cloud Architect</title>
-    <link rel="stylesheet" href="tooplate-titan-style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-<!--
-
-Tooplate 2147 Titan Folio
-
-https://www.tooplate.com/view/2147-titan-folio
-
-Free HTML CSS Template
-
--->
+    <meta name="title" content="Eweka Gabriel's portfolio">
+    <meta name="description" content="DevOps Engineer & Cloud Architect building scalable infrastructure, CI/CD pipelines, and cloud-native solutions.">
+    <link rel="canonical" href="https://GabrielEweka.dev/">
+    <!-- Open Graph (Facebook, LinkedIn) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://GabrielEweka.dev/">
+    <meta property="og:title" content="Eweka Gabriel's portfolio">
+    <meta property="og:description" content="DevOps Engineer & Cloud Architect building scalable infrastructure, CI/CD pipelines, and cloud-native solutions.">
+    <meta property="og:image" content="https://GabrielEweka.dev/Asset/IMG_47632.jpg">
+    <meta property="og:image:secure_url" content="https://GabrielEweka.dev/Asset/IMG_47632.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="Portrait of Eweka Gabriel">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@EwekaGabriell">
+    <meta name="twitter:title" content="Eweka Gabriel's portfolio">
+    <meta name="twitter:description" content="DevOps Engineer & Cloud Architect building scalable infrastructure, CI/CD pipelines, and cloud-native solutions.">
+    <meta name="twitter:image" content="https://GabrielEweka.dev/Asset/IMG_47632.jpg">
+    <meta name="twitter:image:alt" content="Portrait of Eweka Gabriel">
+    <title>Eweka Gabriel - DevOps Engineer Portfolio</title>
+    <link rel="icon" href="/Asset/logo.png?v=2" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav id="navbar">
+    <!-- Navigation -->
+    <nav class="navbar">
         <div class="nav-container">
-            <a href="#home" class="logo">
-                <img src="Asset/logo.png" alt="Eweka Gabriel logo" class="brand-logo">
-            </a>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#timeline">Journey</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="mobile-menu-btn" id="mobileMenuBtn">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="nav-logo">
+                <a href="#home">
+                    <img src="/Asset/logo.png?v=3" alt="Eweka Gabriel logo" class="logo-img">
+                </a>
             </div>
-        </div>
-        <div class="mobile-nav" id="mobileNav">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#timeline">Journey</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#resume" class="nav-link">Resume</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#portfolio" class="nav-link">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#blog" class="nav-link">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
             </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
     </nav>
 
+    <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-bg-animation">
-            <div class="floating-shape shape-1"></div>
-            <div class="floating-shape shape-2"></div>
-            <div class="floating-shape shape-3"></div>
-            <div class="geo-shape geo-1"></div>
-            <div class="geo-shape geo-2"></div>
-            <div class="particles">
-                <span class="particle"></span>
-                <span class="particle"></span>
-                <span class="particle"></span>
-                <span class="particle"></span>
-                <span class="particle"></span>
-                <span class="particle"></span>
-                <span class="particle"></span>
-                <span class="particle"></span>
-                <span class="particle"></span>
-                <span class="particle"></span>
-            </div>
-        </div>
+        <div class="hero-container">
             <div class="hero-content">
-            <h1>Eweka Gabriel</h1>
-            <p class="subtitle">DevOps Engineer & Cloud Architect</p>
-            <p>Crafting digital experiences with passion and precision</p>
-            <div class="cta-buttons">
-                <a href="#portfolio" class="cta-primary">View My Work</a>
-                <a href="#contact" class="cta-secondary">Let's Talk</a>
-                <a href="#blog" class="cta-secondary">View My Blog</a>
-            </div>
-            <div class="hero-social" style="display:flex;gap:12px;margin-top:14px;align-items:center;justify-content:center;">
-                <a href="https://github.com/Eweka01" target="_blank" aria-label="GitHub" style="color:inherit;text-decoration:none;font-size:1.25rem;"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/gabriel-eweka/" target="_blank" aria-label="LinkedIn" style="color:inherit;text-decoration:none;font-size:1.25rem;"><i class="fab fa-linkedin"></i></a>
-                <a href="https://x.com/EwekaGabriell" target="_blank" aria-label="X" style="color:inherit;text-decoration:none;font-size:1.25rem;"><i class="fab fa-x-twitter"></i></a>
-                <a href="mailto:eweka@gabrieleweka.dev" aria-label="Email" style="color:inherit;text-decoration:none;font-size:1.25rem;"><i class="fas fa-envelope"></i></a>
-            </div>
-            <div class="hero-quick mobile-only">
-                <div class="quick-row">
-                    <span class="chip"><i class="fa-solid fa-location-dot"></i> Brooklyn, NY</span>
-                    <span class="chip success"><i class="fa-solid fa-circle"></i> Available</span>
+                <h1 class="hero-title">Hi, I'm <span class="highlight">Eweka Gabriel</span></h1>
+                <h2 class="hero-subtitle">DevOps Engineer & Cloud Architect</h2>
+                <p class="hero-description">
+                    I specialize in building scalable infrastructure, automating deployment pipelines, 
+                    and implementing cloud-native solutions. Passionate about DevOps culture and 
+                    continuous improvement.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#portfolio" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
                 </div>
-                <div class="quick-row">
-                    <a class="chip link" href="mailto:eweka@gabrieleweka.dev"><i class="fa-solid fa-envelope"></i> eweka@gabrieleweka.dev</a>
-                </div>
-                <div class="quick-row">
-                    <span class="chip muted">AWS</span>
-                    <span class="chip muted">Kubernetes</span>
-                    <span class="chip muted">Terraform</span>
-                    <span class="chip muted">GitHub Actions</span>
+                <div class="hero-social">
+                    <a href="https://github.com/Eweka01" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/gabriel-eweka/" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://x.com/EwekaGabriell" target="_blank" class="social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="mailto:eweka@gabrieleweka.dev" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
                 </div>
             </div>
-            
-            <div class="stats-section">
-                <div class="stat-card">
-                    <span class="stat-number">50+</span>
-                    <span class="stat-label">Projects</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-number">5+</span>
-                    <span class="stat-label">Years</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="fade-in">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">About Me</h2>
-                <p class="section-subtitle">Passionate about creating digital experiences that make a difference</p>
-                </div>
-
-            <div class="about-content">
-                <div class="about-intro">
-                    <div class="about-image"></div>
+            <div class="hero-image">
+                <div class="profile-card">
+                    <div class="profile-image">
+                        <img src="Asset/IMG_47632.jpg" alt="Eweka Gabriel">
+                    </div>
+                    <div class="status-indicator">
+                        <span class="status-dot"></span>
+                        <span class="status-text">Available for work</span>
+                    </div>
                     <div class="mobile-social">
-                        <a href="https://github.com/Eweka01" target="_blank" aria-label="GitHub" class="social-link"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/gabriel-eweka/" target="_blank" aria-label="LinkedIn" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://x.com/EwekaGabriell" target="_blank" aria-label="X" class="social-link"><i class="fab fa-x-twitter"></i></a>
-                        <a href="mailto:eweka@gabrieleweka.dev" aria-label="Email" class="social-link"><i class="fas fa-envelope"></i></a>
-                    </div>
-                    <div class="about-text">
-                        <h3>My Journey</h3>
-                        <p>
-                            I'm a passionate DevOps Engineer with hands-on experience in designing, automating, and maintaining
-                            scalable cloud infrastructure across AWS and hybrid environments. My work centers around creating
-                            efficient, secure, and resilient systems through automation, CI/CD, and Infrastructure as Code (IaC).
-                        </p>
-                        <p>
-                            I’ve delivered several AWS-based projects, including containerized deployments, CI/CD pipelines,
-                            real-time analytics pipelines, and baseline security configurations using tools like Terraform,
-                            Ansible, Docker, Kubernetes, Jenkins, GitLab CI/CD, and Prometheus/Grafana. My approach always
-                            includes security at every stage—implementing IAM best practices, CIS benchmarks, and compliance
-                            frameworks such as NIST 800-53 and ISO 27001 to ensure system integrity and governance.
-                        </p>
-                        <p>
-                            I hold a Bachelor’s degree in Computer Science and a Master’s degree in Cybersecurity Operations
-                            Management, which strengthen my ability to merge DevOps efficiency with security-driven design. I’m
-                            also the creator of the Blueprint Case Study Series, where I break down real DevOps and Cloud
-                            projects into clear, story-driven technical guides to help others learn practical, hands-on
-                            engineering.
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="about-cards">
-                    <div class="about-card">
-                        <h4>🎯 Mission</h4>
-                        <p>To create digital experiences that inspire, engage, and solve real-world problems through innovative design and development.</p>
-                    </div>
-                    
-                    <div class="about-card">
-                        <h4>💡 Vision</h4>
-                        <p>A world where technology seamlessly integrates with human needs, creating more meaningful digital interactions.</p>
+                        <a href="https://github.com/Eweka01" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/gabriel-eweka/" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://x.com/EwekaGabriell" target="_blank" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="mailto:eweka@gabrieleweka.dev" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="fade-in">
+    <!-- About Section -->
+    <section id="about" class="about">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Skills & Expertise</h2>
-                <p class="section-subtitle">Combining technical excellence with creative vision</p>
-            </div>
-
-            <div class="skills-container">
-                <div class="skills-wrapper">
-                    <div class="skills-visual">
-                        <div class="skills-circle">
-                            <div class="skill-node">
-                                <div class="skill-icon">☁️</div>
-                                <div class="skill-name">AWS</div>
-                            </div>
-                            <div class="skill-node">
-                                <div class="skill-icon">🐳</div>
-                                <div class="skill-name">Kubernetes</div>
-                            </div>
-                            <div class="skill-node">
-                                <div class="skill-icon">🛠️</div>
-                                <div class="skill-name">Terraform</div>
-                            </div>
-                            <div class="skill-node">
-                                <div class="skill-icon">⚙️</div>
-                                <div class="skill-name">CI/CD</div>
-                            </div>
-                            <div class="skill-node">
-                                <div class="skill-icon">🔐</div>
-                                <div class="skill-name">Security</div>
-                            </div>
-                            <div class="skill-node">
-                                <div class="skill-icon">📊</div>
-                                <div class="skill-name">Monitoring</div>
-                            </div>
-                            <div class="skills-center">⚡</div>
-                        </div>
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm a passionate DevOps Engineer with hands-on experience in designing, automating, and maintaining
+                        scalable cloud infrastructure across AWS and hybrid environments. My work centers around creating
+                        efficient, secure, and resilient systems through automation, CI/CD, and Infrastructure as Code (IaC).
+                    </p>
+                    <p>
+                        I’ve delivered several AWS-based projects, including containerized deployments, CI/CD pipelines,
+                        real-time analytics pipelines, and baseline security configurations using tools like Terraform,
+                        Ansible, Docker, Kubernetes, Jenkins, GitLab CI/CD, and Prometheus/Grafana. My approach always
+                        includes security at every stage—implementing IAM best practices, CIS benchmarks, and compliance
+                        frameworks such as NIST 800-53 and ISO 27001 to ensure system integrity and governance.
+                    </p>
+                    <p>
+                        I hold a Bachelor’s degree in Computer Science and a Master’s degree in Cybersecurity Operations
+                        Management, which strengthen my ability to merge DevOps efficiency with security-driven design. I’m
+                        also the creator of the Blueprint Case Study Series, where I break down real DevOps and Cloud
+                        projects into clear, story-driven technical guides to help others learn practical, hands-on
+                        engineering.
+                    </p>
                 </div>
-                    
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <h4>Cloud & Infrastructure</h4>
-                            <p>AWS, Azure, Google Cloud; resilient architectures and automation</p>
-                            <div class="skill-progress">
-                                <div class="skill-progress-bar" style="width: 95%"></div>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Cloud & Infrastructure</h3>
+                        <div class="skills">
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">Azure</span>
+                            <span class="skill-tag">Google Cloud</span>
+                            <span class="skill-tag">Terraform</span>
+                            <span class="skill-tag">Ansible</span>
+                            <span class="skill-tag">CloudFormation</span>
                         </div>
                     </div>
-                        
-                        <div class="skill-item">
-                            <h4>Containerization & Orchestration</h4>
-                            <p>Docker, Kubernetes, Helm; reliable deployments and scaling</p>
-                            <div class="skill-progress">
-                                <div class="skill-progress-bar" style="width: 92%"></div>
+                    <div class="skill-category">
+                        <h3>Containerization & Orchestration</h3>
+                        <div class="skills">
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Kubernetes</span>
+                            <span class="skill-tag">Helm</span>
+                            <span class="skill-tag">Argo CD</span>
                         </div>
                     </div>
-                        
-                        <div class="skill-item">
-                            <h4>CI/CD & Automation</h4>
-                            <p>GitHub Actions, Jenkins, GitLab CI/CD; test, scan, deploy</p>
-                            <div class="skill-progress">
-                                <div class="skill-progress-bar" style="width: 90%"></div>
+                    <div class="skill-category">
+                        <h3>CI/CD & Automation</h3>
+                        <div class="skills">
+                            <span class="skill-tag">Jenkins</span>
+                            <span class="skill-tag">GitLab CI/CD</span>
+                            <span class="skill-tag">GitHub Actions</span>
+                            <span class="skill-tag">Maven</span>
                         </div>
                     </div>
-                        
-                        <div class="skill-item">
-                            <h4>Observability & Security</h4>
-                            <p>Prometheus, Grafana, ELK; IAM, CIS, ISO 27001 practices</p>
-                            <div class="skill-progress">
-                                <div class="skill-progress-bar" style="width: 88%"></div>
-                            </div>
+                    <div class="skill-category">
+                        <h3>Monitoring & Observability</h3>
+                        <div class="skills">
+                            <span class="skill-tag">Prometheus</span>
+                            <span class="skill-tag">Grafana</span>
+                            <span class="skill-tag">ELK Stack</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Security & Compliance</h3>
+                        <div class="skills">
+                            <span class="skill-tag">NIST 800-53</span>
+                            <span class="skill-tag">ISO 27001</span>
+                            <span class="skill-tag">CIS</span>
+                            <span class="skill-tag">IAM</span>
+                            <span class="skill-tag">FIM</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Version Control & Scripting</h3>
+                        <div class="skills">
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">GitHub</span>
+                            <span class="skill-tag">Bash</span>
+                            <span class="skill-tag">PowerShell</span>
+                            <span class="skill-tag">Python</span>
                         </div>
                     </div>
                 </div>
@@ -244,94 +209,111 @@ Free HTML CSS Template
         </div>
     </section>
 
-    <section id="timeline" class="fade-in">
+    <!-- What I'm Doing Section -->
+    <section class="current-work">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">What I'm Doing</h2>
-                <p class="section-subtitle">Focus areas I’m actively building and improving</p>
-            </div>
-            <div class="timeline-container">
-                <div class="timeline-line"></div>
-                <div class="timeline-progress"></div>
-
-                <div class="timeline-item">
-                    <div class="timeline-node">☁️</div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">Cloud Architecture</h3>
-                        <p class="timeline-description">Designing and implementing scalable cloud solutions using AWS and Azure.</p>
+            <h2 class="section-title">What I'm Doing</h2>
+            <div class="work-grid">
+                <div class="work-item">
+                    <div class="work-icon">
+                        <i class="fas fa-cloud"></i>
                     </div>
+                    <h3>Cloud Architecture</h3>
+                    <p>Designing and implementing scalable cloud solutions using AWS and Azure</p>
                 </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-node">🔧</div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">DevOps Automation</h3>
-                        <p class="timeline-description">Building CI/CD pipelines and automating infrastructure deployment.</p>
+                <div class="work-item">
+                    <div class="work-icon">
+                        <i class="fas fa-cogs"></i>
                     </div>
+                    <h3>DevOps Automation</h3>
+                    <p>Building CI/CD pipelines and automating infrastructure deployment</p>
                 </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-node">🛡️</div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">Security & Compliance</h3>
-                        <p class="timeline-description">Implementing security best practices and compliance frameworks.</p>
+                <div class="work-item">
+                    <div class="work-icon">
+                        <i class="fas fa-shield-alt"></i>
                     </div>
+                    <h3>Security & Compliance</h3>
+                    <p>Implementing security best practices and compliance frameworks</p>
                 </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-node">📈</div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">Monitoring & Observability</h3>
-                        <p class="timeline-description">Setting up comprehensive monitoring and alerting systems.</p>
+                <div class="work-item">
+                    <div class="work-icon">
+                        <i class="fas fa-chart-line"></i>
                     </div>
+                    <h3>Monitoring & Observability</h3>
+                    <p>Setting up comprehensive monitoring and alerting systems</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="portfolio" class="fade-in">
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Featured Work</h2>
-                <p class="section-subtitle">A showcase of projects that demonstrate creativity and technical excellence</p>
-            </div>
-
+            <h2 class="section-title">Portfolio</h2>
             <div class="portfolio-grid">
-                <div class="portfolio-card">
-                    <div class="portfolio-image ecommerce"></div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://via.placeholder.com/400x250/4F46E5/FFFFFF?text=Kubernetes+Cluster" alt="Kubernetes Project">
+                    </div>
                     <div class="portfolio-content">
-                        <h3 class="portfolio-title">Multi-Cloud Kubernetes Setup</h3>
-                        <p class="portfolio-description">Highly available Kubernetes across multiple cloud providers with automated scaling and monitoring.</p>
-                        <div class="portfolio-tags">
-                            <span class="tag">Kubernetes</span>
-                            <span class="tag">Terraform</span>
-                            <span class="tag">AWS</span>
+                        <h3>Multi-Cloud Kubernetes Setup</h3>
+                        <p>Implemented a highly available Kubernetes cluster across multiple cloud providers with automated scaling and monitoring.</p>
+                        <div class="portfolio-tech">
+                            <span class="tech-tag">Kubernetes</span>
+                            <span class="tech-tag">Terraform</span>
+                            <span class="tech-tag">AWS</span>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="#" class="portfolio-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="#" class="portfolio-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
                         </div>
                     </div>
                 </div>
-                
-                <div class="portfolio-card">
-                    <div class="portfolio-image analytics"></div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://via.placeholder.com/400x250/10B981/FFFFFF?text=CI/CD+Pipeline" alt="CI/CD Pipeline">
+                    </div>
                     <div class="portfolio-content">
-                        <h3 class="portfolio-title">Automated CI/CD Pipeline</h3>
-                        <p class="portfolio-description">Comprehensive CI/CD with automated testing, security scanning, and multi-env deployments.</p>
-                        <div class="portfolio-tags">
-                            <span class="tag">Jenkins</span>
-                            <span class="tag">Docker</span>
-                            <span class="tag">GitHub Actions</span>
+                        <h3>Automated CI/CD Pipeline</h3>
+                        <p>Built a comprehensive CI/CD pipeline with automated testing, security scanning, and deployment to multiple environments.</p>
+                        <div class="portfolio-tech">
+                            <span class="tech-tag">Jenkins</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">SonarQube</span>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="#" class="portfolio-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="#" class="portfolio-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
                         </div>
                     </div>
                 </div>
-                
-                <div class="portfolio-card">
-                    <div class="portfolio-image music"></div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://via.placeholder.com/400x250/F59E0B/FFFFFF?text=Infrastructure+Monitoring" alt="Monitoring Dashboard">
+                    </div>
                     <div class="portfolio-content">
-                        <h3 class="portfolio-title">Infrastructure Monitoring Dashboard</h3>
-                        <p class="portfolio-description">Grafana dashboards and Prometheus metrics providing actionable observability.</p>
-                        <div class="portfolio-tags">
-                            <span class="tag">Grafana</span>
-                            <span class="tag">Prometheus</span>
-                            <span class="tag">ELK</span>
+                        <h3>Infrastructure Monitoring Dashboard</h3>
+                        <p>Created a comprehensive monitoring solution with Grafana dashboards and Prometheus metrics collection.</p>
+                        <div class="portfolio-tech">
+                            <span class="tech-tag">Grafana</span>
+                            <span class="tech-tag">Prometheus</span>
+                            <span class="tech-tag">ELK Stack</span>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="#" class="portfolio-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="#" class="portfolio-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -339,82 +321,114 @@ Free HTML CSS Template
         </div>
     </section>
 
-    <section id="contact" class="fade-in">
+    <!-- Blog Section -->
+    <section id="blog" class="blog">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Let's Create Together</h2>
-                <p class="section-subtitle">Ready to bring your ideas to life? Let's start a conversation</p>
+            <h2 class="section-title">Latest Blog Posts</h2>
+            <div class="blog-grid">
+                <article class="blog-item">
+                    <div class="blog-image">
+                        <img src="https://via.placeholder.com/300x200/8B5CF6/FFFFFF?text=Kubernetes+Guide" alt="Kubernetes Guide">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">Dec 15, 2024</span>
+                            <span class="blog-category">DevOps</span>
+                        </div>
+                        <h3>Getting Started with Kubernetes: A Complete Guide</h3>
+                        <p>Learn the fundamentals of Kubernetes and how to deploy your first application on a cluster.</p>
+                        <a href="#" class="blog-link">Read More</a>
+                    </div>
+                </article>
+                <article class="blog-item">
+                    <div class="blog-image">
+                        <img src="https://via.placeholder.com/300x200/EF4444/FFFFFF?text=CI/CD+Best+Practices" alt="CI/CD Best Practices">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">Dec 10, 2024</span>
+                            <span class="blog-category">Automation</span>
+                        </div>
+                        <h3>CI/CD Best Practices for Modern Applications</h3>
+                        <p>Discover the essential practices for building robust and reliable CI/CD pipelines.</p>
+                        <a href="#" class="blog-link">Read More</a>
+                    </div>
+                </article>
+                <article class="blog-item">
+                    <div class="blog-image">
+                        <img src="https://via.placeholder.com/300x200/06B6D4/FFFFFF?text=Cloud+Security" alt="Cloud Security">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">Dec 5, 2024</span>
+                            <span class="blog-category">Security</span>
+                        </div>
+                        <h3>Cloud Security Fundamentals</h3>
+                        <p>Essential security practices every DevOps engineer should know when working with cloud platforms.</p>
+                        <a href="#" class="blog-link">Read More</a>
+                    </div>
+                </article>
             </div>
+        </div>
+    </section>
 
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
             <div class="contact-content">
                 <div class="contact-info">
-                    <h3>Get In Touch</h3>
-                    <p>I'm always excited to work on new projects and collaborate with amazing people. Whether you have a specific project in mind or just want to explore possibilities, I'd love to hear from you.</p>
-                    
-                    <div class="contact-details">
-                        <h4>💼 Available for:</h4>
-                        <ul>
-                            <li>Freelance Projects</li>
-                            <li>Full-time Opportunities</li>
-                            <li>Consulting & Code Reviews</li>
-                            <li>Speaking & Workshops</li>
-                        </ul>
+                    <h3>Let's work together</h3>
+                    <p>I'm always interested in new opportunities and exciting projects. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <span>eweka@gabrieleweka.dev</span>
                         </div>
-
-                    <div class="contact-details">
-                        <h4>📍 Based in:</h4>
-                        <p>Brooklyn, New York (Open to Remote)</p>
+                        <div class="contact-method">
+                            <i class="fas fa-phone"></i>
+                            <span>+1 3477998864</span>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Brooklyn, New York</span>
                         </div>
                     </div>
-
-                <div class="contact-form-container">
+                </div>
                 <form class="contact-form">
                     <div class="form-group">
-                            <input type="text" class="form-input" placeholder="Your Name" required>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
                     </div>
                     <div class="form-group">
-                            <input type="email" class="form-input" placeholder="Your Email" required>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
                     </div>
                     <div class="form-group">
-                            <input type="text" class="form-input" placeholder="Project Type" required>
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
                     </div>
                     <div class="form-group">
-                            <textarea class="form-textarea" rows="5" placeholder="Tell me about your project..." required></textarea>
+                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
                     </div>
-                        <button type="submit" class="submit-btn">Send Message</button>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
                 </form>
-                </div>
             </div>
         </div>
     </section>
 
-    <footer>
-        <div class="footer-bottom">
-            <p class="footer-copyright">
-                © 2025 Eweka Gabriel. All rights reserved.
-            </p>
-            <div class="footer-credits">
-                <a href="https://www.tooplate.com" target="_blank" rel="noopener noreferrer" class="footer-credit-link tooplate">
-                    <span class="footer-credit-icon">🎨</span>
-                    <span>Design by Tooplate</span>
-                </a>
-                <div class="footer-divider"></div>
-                <a href="https://fonts.google.com" target="_blank" rel="noopener noreferrer" class="footer-credit-link">
-                    <span class="footer-credit-icon">📝</span>
-                    <span>Google Fonts</span>
-                </a>
-                <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer" class="footer-credit-link">
-                    <span class="footer-credit-icon">📸</span>
-                    <span>Unsplash</span>
-                </a>
-                <a href="https://cdnjs.com" target="_blank" rel="noopener noreferrer" class="footer-credit-link">
-                    <span class="footer-credit-icon">⚡</span>
-                    <span>CDNJS</span>
-                </a>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2024 Eweka Gabriel. All rights reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#" class="footer-link">System Status</a>
+                    <a href="#" class="footer-link">Uptime</a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <script src="tooplate-titan-script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
