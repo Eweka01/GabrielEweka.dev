@@ -536,6 +536,12 @@ section {
     animation: slideInUp 1s ease-out 0.6s both;
 }
 
+.cta-buttons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .cta-primary, .cta-secondary {
     padding: 1rem 2rem;
     border-radius: 50px;
@@ -1870,5 +1876,16 @@ footer {
 @media (max-width: 768px) {
     .hero-quick { display: block; }
     .hero { padding-top: 120px; padding-bottom: 48px; }
-    .cta-buttons { gap: .75rem; }
+    .cta-buttons { gap: .6rem; flex-direction: row; justify-content: center; flex-wrap: wrap; }
+    .cta-buttons a { padding: 10px 14px; font-size: .95rem; }
+}
+
+/* What I'm Doing responsive cards */
+.timeline-container { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 1rem; }
+.timeline-item { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 14px; padding: 1rem; }
+.timeline-title { margin: 0 0 .25rem 0; }
+.timeline-description { margin: 0; color: var(--text-secondary); font-size: .95rem; }
+
+@media (min-width: 900px) {
+    .timeline-container { grid-template-columns: repeat(4, minmax(0,1fr)); }
 }
