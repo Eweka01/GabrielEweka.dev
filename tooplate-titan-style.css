@@ -579,10 +579,10 @@ section {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid var(--glass-border);
-    border-radius: 20px;
-    padding: 2rem;
+    border-radius: 16px;
+    padding: 1.5rem 1.75rem;
     text-align: center;
-    min-width: 150px;
+    min-width: 180px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
 }
@@ -593,16 +593,16 @@ section {
 }
 
 .stat-number {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
     font-weight: 700;
     color: var(--text-primary);
     display: block;
 }
 
 .stat-label {
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: var(--text-secondary);
-    margin-top: 0.5rem;
+    margin-top: 0.4rem;
 }
 
 /* About section */
@@ -1807,6 +1807,9 @@ footer {
     .hero h1 { font-size: 1.75rem; }
     .hero { padding: 100px 1rem 60px; }
     .container { padding: 0 1rem; }
+
+    .stat-card { max-width: 180px; }
+    .stat-number { font-size: 1.6rem; }
 }
 
 .mobile-social {
