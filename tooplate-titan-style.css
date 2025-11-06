@@ -1788,3 +1788,23 @@ footer {
     outline: 2px solid var(--accent-blue);
     outline-offset: 2px;
 }
+
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2rem; line-height: 1.15; }
+    .hero .subtitle { font-size: 1rem; opacity: 0.9; }
+    .cta-buttons a { padding: 10px 16px; font-size: 0.95rem; }
+    .about-intro { flex-direction: column; gap: 1.5rem; }
+    .about-image { width: 200px; height: 200px; }
+    .skills-wrapper { flex-direction: column; gap: 1.5rem; }
+    .skills-list { width: 100%; }
+    .timeline-controls { gap: .5rem; flex-wrap: wrap; }
+    .portfolio-grid { grid-template-columns: 1fr !important; }
+    .contact-content { flex-direction: column; gap: 1.5rem; }
+    .nav-links { gap: 1rem; }
+}
+
+@media (max-width: 480px) {
+    .hero h1 { font-size: 1.75rem; }
+    .hero { padding: 100px 1rem 60px; }
+    .container { padding: 0 1rem; }
+}
