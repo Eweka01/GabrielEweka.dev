@@ -332,26 +332,40 @@ section {
     gap: 2rem;
 }
 
-.skill-category h3 {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    color: #1F2937;
+/* Desktop polish for skills */
+.skill-category {
+    background: #ffffff;
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 1.25rem;
 }
 
 .skills {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0.6rem 0.6rem;
 }
 
 .skill-tag {
     background-color: #4F46E5;
     color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
+    padding: 0.45rem 0.9rem;
+    border-radius: 999px;
     font-size: 0.9rem;
     font-weight: 500;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+.skill-tag:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(79,70,229,0.25);
+    background-color: #4338CA;
+}
+
+/* Wider grid and spacing on large screens */
+@media (min-width: 1024px) {
+    .skills-grid { grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
+    .skill-category h3 { font-size: 1.15rem; margin-bottom: 0.875rem; }
 }
 
 /* Current Work Section */
@@ -810,4 +824,10 @@ section {
 @media (max-width: 768px) {
     .skills-more { display: none; }
     .skills-more.expanded { display: block; }
+}
+
+/* Hide mobile toggle on desktop; show on mobile */
+.skills-toggle-wrap { display: none; }
+@media (max-width: 768px) {
+    .skills-toggle-wrap { display: block; }
 }
