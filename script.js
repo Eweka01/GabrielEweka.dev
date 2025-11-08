@@ -332,14 +332,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Skills show more / less on mobile
-document.addEventListener('DOMContentLoaded', () => {
-    const toggleBtn = document.getElementById('skillsToggle');
-    const more = document.getElementById('skills-more');
-    if (toggleBtn && more) {
-        toggleBtn.addEventListener('click', () => {
-            const expanded = more.classList.toggle('expanded');
-            toggleBtn.textContent = expanded ? 'Show fewer skills' : 'Show more skills';
-        });
-    }
-});
