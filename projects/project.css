@@ -1,5 +1,46 @@
 /* Project Detail Page Styles */
 
+/* Demo Video */
+.demo-video {
+    background: #0f0f0f;
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 2.5rem;
+}
+
+.demo-video-title {
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 1rem 1.5rem 0.75rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.demo-video-title i {
+    color: #4F46E5;
+}
+
+.demo-video video {
+    width: 100%;
+    display: block;
+    max-height: 520px;
+    background: #000;
+}
+
+.demo-video-caption {
+    color: rgba(255,255,255,0.45);
+    font-size: 0.8rem;
+    padding: 0.75rem 1.5rem;
+    margin: 0;
+    font-style: italic;
+}
+
+
 .project-page {
     padding-top: 70px;
 }

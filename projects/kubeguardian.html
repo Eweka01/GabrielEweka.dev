@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KubeGuardian — AI-Powered Kubernetes Incident Response — Eweka Gabriel</title>
+    <meta name="description" content="An MCP-enabled AI-powered Kubernetes incident response system using AWS EKS, Terraform, Prometheus, n8n, GPT-4o, and Claude Desktop.">
+    <link rel="icon" href="/Asset/logo.png?v=2" type="image/png">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="project.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="/">
+                    <img src="/Asset/logo.png?v=3" alt="Eweka Gabriel logo" class="logo-img">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="/#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="/#skills" class="nav-link">Skills</a></li>
+                <li class="nav-item"><a href="/#resume" class="nav-link">Resume</a></li>
+                <li class="nav-item"><a href="/#portfolio" class="nav-link">Portfolio</a></li>
+                <li class="nav-item"><a href="/#blog" class="nav-link">Blog</a></li>
+                <li class="nav-item"><a href="/#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="project-page">
+        <!-- Hero -->
+        <section class="project-hero">
+            <div class="container">
+                <a href="/#portfolio" class="back-link">
+                    <i class="fas fa-arrow-left"></i> Back to Portfolio
+                </a>
+                <div class="project-meta">
+                    <span class="project-series">Eweka — Blueprint Series</span>
+                    <span class="project-read-time">10 min read</span>
+                </div>
+                <h1 class="project-title">I Built an MCP-Enabled AI-Powered Kubernetes Incident Response System — KubeGuardian</h1>
+                <div class="project-tags">
+                    <span class="tech-tag">AWS EKS</span>
+                    <span class="tech-tag">Terraform</span>
+                    <span class="tech-tag">Kubernetes</span>
+                    <span class="tech-tag">Argo CD</span>
+                    <span class="tech-tag">Prometheus</span>
+                    <span class="tech-tag">Grafana</span>
+                    <span class="tech-tag">n8n</span>
+                    <span class="tech-tag">FastAPI</span>
+                    <span class="tech-tag">GPT-4o</span>
+                    <span class="tech-tag">Claude MCP</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                    <span class="tech-tag">Telegram</span>
+                </div>
+                <div class="project-actions">
+                    <a href="https://github.com/Eweka01/kubeguardian" target="_blank" class="btn btn-primary">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Architecture Diagram -->
+        <section class="project-diagram">
+            <div class="container">
+                <img src="../Asset/4.png" alt="KubeGuardian Architecture Diagram" class="diagram-img">
+                <p class="diagram-caption">Full architecture: EKS cluster with ArgoCD, Prometheus, Loki, n8n automation, FastAPI agent, PostgreSQL, Claude MCP, and external AI services</p>
+            </div>
+        </section>
+
+        <!-- Content -->
+        <section class="project-content">
+            <div class="project-body">
+
+                <!-- Demo Video -->
+                <div class="demo-video">
+                    <h2 class="demo-video-title"><i class="fas fa-play-circle"></i> Live Demo</h2>
+                    <video controls autoplay muted loop playsinline preload="auto">
+                        <source src="../Asset/claude-desk.mov" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p class="demo-video-caption">Claude Desktop connected via MCP — querying the cluster and running incident triage in plain English</p>
+                </div>
+
+                <p class="project-intro">
+                    When a pod crashes at 2 AM, KubeGuardian wakes up, diagnoses the problem with GPT-4o, texts you on Telegram, and fixes it the moment you approve — all without you touching a terminal. This is an AI-driven incident response platform that detects, diagnoses, and fixes Kubernetes incidents automatically, with a human approval step before any change is made.
+                </p>
+
+                <div class="tool-stack">
+                    <h3>Stack</h3>
+                    <div class="tool-list">
+                        <span>AWS EKS</span><span>Terraform</span><span>Kubernetes</span>
+                        <span>Argo CD</span><span>Prometheus</span><span>Alertmanager</span>
+                        <span>Grafana</span><span>Loki</span><span>n8n</span>
+                        <span>FastAPI</span><span>GPT-4o</span><span>Claude Desktop MCP</span>
+                        <span>PostgreSQL</span><span>Telegram</span><span>Amazon ECR</span>
+                    </div>
+                </div>
+
+                <h2>The Problem</h2>
+                <p>On-call is broken. A pod crashloops at 3 AM. Your phone goes off. You groggily open a terminal, run <code>kubectl get pods</code>, dig through logs, search for the runbook, decide whether to restart or rollback, execute the fix, and write up the incident. Forty-five minutes later you go back to bed. This happens dozens of times a week at companies running microservices on Kubernetes.</p>
+                <p>I wanted to change that.</p>
+
+                <h2>What KubeGuardian Does</h2>
+                <p>When a pod crashes or a service degrades:</p>
+                <div class="pipeline-stages">
+                    <div class="stage"><span class="stage-num">1</span><div><strong>Prometheus detects the incident</strong><p>Fires an alert based on configurable thresholds for crashloops, pod readiness, and error rates.</p></div></div>
+                    <div class="stage"><span class="stage-num">2</span><div><strong>n8n receives the alert via webhook</strong><p>Orchestrates the full response workflow across 8 connected nodes.</p></div></div>
+                    <div class="stage"><span class="stage-num">3</span><div><strong>FastAPI agent collects evidence</strong><p>Gathers pod logs, Kubernetes events, restart counts, and deployment state for the affected service.</p></div></div>
+                    <div class="stage"><span class="stage-num">4</span><div><strong>GPT-4o analyzes the evidence</strong><p>Returns a structured JSON diagnosis with root cause, confidence level, and recommended action.</p></div></div>
+                    <div class="stage"><span class="stage-num">5</span><div><strong>Telegram sends you the diagnosis</strong><p>A message with the full diagnosis and a one-click approval link delivered to your phone.</p></div></div>
+                    <div class="stage"><span class="stage-num">6</span><div><strong>You tap Approve</strong><p>n8n resumes the paused workflow and the agent executes the fix — rollback, restart, or scale.</p></div></div>
+                    <div class="stage"><span class="stage-num">7</span><div><strong>Telegram confirms the fix</strong><p>The incident is logged to PostgreSQL with MTTR calculated automatically as a generated column.</p></div></div>
+                    <div class="stage"><span class="stage-num">8</span><div><strong>Query history from Claude Desktop</strong><p>Ask the entire incident database in plain English via 15 MCP tools, no terminal needed.</p></div></div>
+                </div>
+
+                <h2>Why Two Interaction Modes</h2>
+                <p>Most incident response tools do one thing: alert you. I wanted to build something different — a platform with two distinct modes that cover the full on-call experience:</p>
+                <p><strong>The automatic path</strong> — for when you're away from your computer at 2 AM. Prometheus detects the incident, n8n orchestrates the response, GPT-4o diagnoses it, and Telegram puts a one-tap approval button on your phone. You don't need a laptop, a terminal, or even to be fully awake.</p>
+                <p><strong>The conversational path</strong> — for when you're at your desk and want to investigate properly. Claude Desktop connects to the cluster through 15 MCP tools. You talk to it in plain English: "What's wrong with payment-service?" "Show me the logs." "Roll it back." No kubectl, no context switching.</p>
+                <p>These share the same FastAPI agent, the same PostgreSQL incident database, and the same Kubernetes cluster. The difference is the interface — one is push-based and phone-friendly, the other is pull-based and conversation-driven.</p>
+
+                <h2>Building the System — 8 Phases</h2>
+
+                <h3>Phase 1 — The Cluster</h3>
+                <p>Provisioned with Terraform using the <code>terraform-aws-modules/eks</code> module. Three t3.medium nodes, Kubernetes 1.29, across two availability zones. Three microservices simulate a real e-commerce backend: <strong>api-gateway</strong>, <strong>payment-service</strong>, and <strong>user-service</strong> — each running 2 replicas with readiness and liveness probes.</p>
+
+                <h3>Phase 2 — Observability</h3>
+                <p>Full observability stack installed via Helm:</p>
+                <ul>
+                    <li>kube-prometheus-stack (Prometheus + Alertmanager + node-exporter)</li>
+                    <li>Loki + Promtail for log aggregation</li>
+                    <li>Grafana with three dashboards: Node Exporter Full, Kubernetes Cluster Monitoring, and Kubernetes Pod Overview</li>
+                </ul>
+
+                <h3>Phase 3 — Alert Rules + Incident Simulator</h3>
+                <p>Three PrometheusRule alerts covering the most common real-world Kubernetes incidents: <code>CrashLoopBackOff</code>, <code>PodNotReady</code>, and <code>HighErrorRate</code>. A bash simulator triggers real incidents on demand:</p>
+                <ul>
+                    <li><code>./scripts/simulate.sh crashloop payment-service</code></li>
+                    <li><code>./scripts/simulate.sh readiness user-service</code></li>
+                    <li><code>./scripts/simulate.sh errorrate api-gateway</code></li>
+                </ul>
+
+                <h3>Phase 4 — The FastAPI Agent</h3>
+                <p>The brain of the remediation layer. Runs in the ops namespace with a ClusterRole granting read access across all namespaces and write access limited to safe operations. Three core endpoints: <code>POST /evidence</code> for evidence collection, <code>POST /execute</code> for allow-listed remediation (rollout_restart, rollout_undo, scale), and <code>POST /incidents</code> for logging. Containerized, pushed to ECR, deployed via Argo CD.</p>
+
+                <h3>Phase 5 — n8n Automation + Telegram ChatOps</h3>
+                <p>n8n is a self-hosted workflow tool running inside the cluster. The workflow has 8 nodes: Webhook → Collect Evidence → GPT-4o Diagnosis → Parse Response → Telegram Alert → Wait for Approval → Execute Fix → Telegram Confirm.</p>
+                <p>The <strong>Wait node</strong> is the key to human-in-the-loop automation. n8n pauses the entire workflow and generates a unique <code>resumeUrl</code> that goes into the Telegram message. When you tap it, n8n resumes exactly where it left off.</p>
+
+                <h3>Phase 6 — Claude Desktop + MCP Server</h3>
+                <p>A Node.js MCP server exposes 15 tools to Claude Desktop — covering pod inspection, log retrieval, evidence collection, incident execution, and history querying. Adding Claude Desktop as a natural language interface to the cluster took less than 200 lines of JavaScript and completely changed interaction with the system. The value-to-effort ratio was exceptional.</p>
+
+                <h3>Phase 7 — Argo CD GitOps</h3>
+                <p>Every Kubernetes manifest lives in <code>infra/kubernetes/</code> in the GitHub repo. Argo CD watches that directory and automatically applies changes within ~3 minutes of a git push. Infrastructure changes are reviewed via pull requests, manual <code>kubectl apply</code> changes are automatically reverted, and every change is auditable in git history.</p>
+
+                <h3>Phase 8 — Incident Database + MTTR Tracking</h3>
+                <p>Every resolved incident is written to PostgreSQL. <code>mttr_seconds</code> is a generated column — calculated automatically when <code>resolved_at</code> is set. No application code needed. The <code>GET /incidents/stats</code> endpoint returns average, minimum, and maximum MTTR per service and incident type.</p>
+
+                <h2>The Hardest Problems I Solved</h2>
+                <div class="pipeline-stages">
+                    <div class="stage"><span class="stage-num"><i class="fas fa-wrench"></i></span><div><strong>EBS CSI driver on EKS 1.29</strong><p>EKS 1.29 deprecated the in-tree EBS provisioner. PVCs were stuck Pending until I installed the aws-ebs-csi-driver addon and attached AmazonEBSCSIDriverPolicy to the node role.</p></div></div>
+                    <div class="stage"><span class="stage-num"><i class="fas fa-wrench"></i></span><div><strong>n8n data loss on pod restart</strong><p>Original n8n used emptyDir — every pod restart wiped the entire workflow database. Fixed with a 5Gi EBS PVC and <code>securityContext.fsGroup: 1000</code>.</p></div></div>
+                    <div class="stage"><span class="stage-num"><i class="fas fa-wrench"></i></span><div><strong>AZ affinity for EBS volumes</strong><p>EBS volumes are locked to a single AZ. Pod was stuck Pending because the PVC was in us-east-1a but the node was in us-east-1b. Fixed with <code>nodeSelector: topology.kubernetes.io/zone</code>.</p></div></div>
+                    <div class="stage"><span class="stage-num"><i class="fas fa-wrench"></i></span><div><strong>OpenAI Responses API format change</strong><p>n8n's OpenAI node updated to the new Responses API which returns a different path than the old one. Fixed by rewriting the parser with optional chaining to handle all three possible response formats.</p></div></div>
+                    <div class="stage"><span class="stage-num"><i class="fas fa-wrench"></i></span><div><strong>t3.medium pod limits</strong><p>A t3.medium node can only run 17 pods due to ENI limits. With the full observability stack, the cluster filled up. Fixed by scaling the node group from 2 to 3 nodes.</p></div></div>
+                </div>
+
+                <h2>Key Takeaways</h2>
+                <div class="learnings">
+                    <div class="learning-item"><i class="fas fa-check-circle"></i><div><strong>Start with the alert → fix loop first.</strong> Get Prometheus → Alertmanager → n8n → agent → fix working before adding AI, Telegram, or the database. Validate each step in isolation.</div></div>
+                    <div class="learning-item"><i class="fas fa-check-circle"></i><div><strong>EBS volumes have sharp edges on EKS.</strong> AZ affinity, CSI drivers, and fsGroup are all things you won't hit in a local cluster. Budget time for them.</div></div>
+                    <div class="learning-item"><i class="fas fa-check-circle"></i><div><strong>MCP is underrated.</strong> Adding Claude Desktop as a natural language interface took less than 200 lines of JavaScript and completely changed how I interact with the cluster.</div></div>
+                    <div class="learning-item"><i class="fas fa-check-circle"></i><div><strong>MTTR as a generated column is clean.</strong> Letting PostgreSQL calculate <code>resolved_at - detected_at</code> means your application never has to think about it.</div></div>
+                    <div class="learning-item"><i class="fas fa-check-circle"></i><div><strong>Where does the machine stop and the human start?</strong> Get that wrong in either direction and the system is either useless or dangerous. Every approval button in this system is a deliberate answer to that question.</div></div>
+                </div>
+
+                <div class="project-footer">
+                    <a href="https://github.com/Eweka01/kubeguardian" target="_blank" class="btn btn-primary">
+                        <i class="fab fa-github"></i> View Full Code on GitHub
+                    </a>
+                    <a href="/#portfolio" class="btn btn-secondary-dark">
+                        <i class="fas fa-arrow-left"></i> Back to Portfolio
+                    </a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025 Eweka Gabriel. All rights reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#" class="footer-link">System Status</a>
+                    <a href="#" class="footer-link">Uptime</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
