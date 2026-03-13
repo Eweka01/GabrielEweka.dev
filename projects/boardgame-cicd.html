@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Corporate-Style CI/CD Pipeline on AWS — Eweka Gabriel</title>
+    <meta name="description" content="A complete end-to-end CI/CD pipeline built on AWS with Jenkins, Kubernetes, SonarQube, Nexus, Docker, Prometheus, and Grafana.">
+    <link rel="icon" href="/Asset/logo.png?v=2" type="image/png">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="project.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="/">
+                    <img src="/Asset/logo.png?v=3" alt="Eweka Gabriel logo" class="logo-img">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="/#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="/#skills" class="nav-link">Skills</a></li>
+                <li class="nav-item"><a href="/#resume" class="nav-link">Resume</a></li>
+                <li class="nav-item"><a href="/#portfolio" class="nav-link">Portfolio</a></li>
+                <li class="nav-item"><a href="/#blog" class="nav-link">Blog</a></li>
+                <li class="nav-item"><a href="/#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="project-page">
+        <!-- Hero -->
+        <section class="project-hero">
+            <div class="container">
+                <a href="/#portfolio" class="back-link">
+                    <i class="fas fa-arrow-left"></i> Back to Portfolio
+                </a>
+                <div class="project-meta">
+                    <span class="project-series">Eweka — Blueprint Series</span>
+                    <span class="project-read-time">9 min read</span>
+                </div>
+                <h1 class="project-title">I Built a Full Corporate-Style CI/CD Pipeline on AWS with Jenkins, Kubernetes, SonarQube, Nexus, Docker, Prometheus, and Grafana</h1>
+                <div class="project-tags">
+                    <span class="tech-tag">AWS EC2</span>
+                    <span class="tech-tag">Jenkins</span>
+                    <span class="tech-tag">Kubernetes</span>
+                    <span class="tech-tag">Docker</span>
+                    <span class="tech-tag">SonarQube</span>
+                    <span class="tech-tag">Nexus</span>
+                    <span class="tech-tag">Trivy</span>
+                    <span class="tech-tag">Prometheus</span>
+                    <span class="tech-tag">Grafana</span>
+                </div>
+                <div class="project-actions">
+                    <a href="https://github.com/Eweka01/Boardgame" target="_blank" class="btn btn-primary">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Architecture Diagram -->
+        <section class="project-diagram">
+            <div class="container">
+                <img src="../Asset/1_iFHAlJc5AUTmtVhERj75CA.webp" alt="CI/CD Pipeline Architecture Diagram" class="diagram-img">
+                <p class="diagram-caption">Full pipeline architecture — from developer push to deployed application with monitoring</p>
+            </div>
+        </section>
+
+        <!-- Content -->
+        <section class="project-content">
+            <div class="project-body">
+
+                <p class="project-intro">
+                    I recently completed a personal DevOps project where I built a full end-to-end CI/CD pipeline from scratch in a way that mirrors a real corporate workflow. This was not just about getting an app deployed. The goal was to simulate how a DevOps engineer would actually handle infrastructure, security checks, artifact management, containerization, Kubernetes deployment, notifications, and monitoring in a real environment.
+                </p>
+
+                <div class="tool-stack">
+                    <h3>Tools Used</h3>
+                    <div class="tool-list">
+                        <span>AWS EC2</span><span>Jenkins</span><span>GitHub</span><span>SonarQube</span>
+                        <span>Nexus Repository</span><span>Docker</span><span>Kubernetes</span><span>Trivy</span>
+                        <span>Kubeaudit</span><span>Prometheus</span><span>Grafana</span>
+                        <span>Blackbox Exporter</span><span>Node Exporter</span>
+                    </div>
+                </div>
+
+                <h2>Project Goal</h2>
+                <p>The idea was to take a Java application, push it to a private GitHub repository, and automate the complete lifecycle:</p>
+                <ul>
+                    <li>Pull source code from GitHub</li>
+                    <li>Compile the application</li>
+                    <li>Run unit tests</li>
+                    <li>Scan code quality with SonarQube</li>
+                    <li>Scan dependencies and filesystem with Trivy</li>
+                    <li>Package the application</li>
+                    <li>Publish artifacts to Nexus</li>
+                    <li>Build and scan a Docker image</li>
+                    <li>Push the image to Docker Hub</li>
+                    <li>Deploy to Kubernetes</li>
+                    <li>Verify deployment</li>
+                    <li>Send pipeline notifications</li>
+                    <li>Monitor both the application and infrastructure</li>
+                </ul>
+
+                <h2>High-Level Architecture</h2>
+                <p>At a high level, the workflow looked like this:</p>
+                <ul>
+                    <li>A developer pushes code to a private GitHub repository</li>
+                    <li>Jenkins pulls the code and runs the CI pipeline</li>
+                    <li>Maven handles compilation, testing, and packaging</li>
+                    <li>SonarQube checks code quality</li>
+                    <li>Trivy scans the filesystem and container image for vulnerabilities</li>
+                    <li>Nexus stores build artifacts for versioned release management</li>
+                    <li>Docker packages the application into an image</li>
+                    <li>Kubernetes deploys the application</li>
+                    <li>Prometheus and Grafana monitor the application and server health</li>
+                </ul>
+
+                <h2>Phase 1: Infrastructure Setup</h2>
+                <p>In the first phase, I prepared the environment:</p>
+                <ul>
+                    <li>Used AWS as the cloud provider</li>
+                    <li>Worked inside a VPC for network isolation</li>
+                    <li>Created EC2 instances for: Kubernetes master node, Kubernetes worker nodes, Jenkins, SonarQube, Nexus, and the monitoring server</li>
+                    <li>Configured security groups and opened only the required ports</li>
+                </ul>
+                <p>This phase mattered because CI/CD is only reliable if the infrastructure underneath it is set up correctly.</p>
+
+                <h3>Kubernetes Cluster Setup</h3>
+                <p>I created a Kubernetes cluster using EC2 instances instead of a managed Kubernetes service. I wanted to understand the setup process more deeply instead of abstracting it away. The cluster included 1 master node and 2 worker nodes. I installed the Kubernetes components manually — kubeadm, kubelet, and kubectl — then initialized the cluster on the master node and joined the worker nodes using the generated join token.</p>
+
+                <h3>Security Check on the Kubernetes Cluster</h3>
+                <p>After the cluster was up, I scanned it with Kubeaudit. That step was important because I did not want to treat Kubernetes as "done" just because it was running. In a real environment, cluster misconfigurations can become security risks. Kubeaudit helped surface issues that could later be reviewed and improved.</p>
+
+                <h3>Setting Up SonarQube and Nexus</h3>
+                <p>Instead of installing everything directly on the host, I used Docker containers for SonarQube and Nexus — giving me a fast and repeatable way to bring those services online.</p>
+                <p><strong>SonarQube</strong> was used for code quality analysis, bug detection, code smell checks, and vulnerability visibility.</p>
+                <p><strong>Nexus</strong> was used as the artifact repository to store build outputs in a structured way, mirroring how release management is handled in more mature environments.</p>
+
+                <h3>Setting Up Jenkins</h3>
+                <p>Jenkins was the center of the CI/CD pipeline. On the Jenkins server, I installed Java 17, Jenkins, Docker, Trivy, and kubectl. I then configured the main Jenkins plugins needed for the workflow:</p>
+                <ul>
+                    <li>Maven integration</li>
+                    <li>SonarQube Scanner</li>
+                    <li>Docker pipeline support</li>
+                    <li>Kubernetes support</li>
+                    <li>Prometheus metrics plugin</li>
+                </ul>
+
+                <h2>Phase 2: Private GitHub Repository</h2>
+                <p>Once the infrastructure was ready, I moved into source control. I created a private GitHub repository and pushed the application source code into it. I chose a private repository because this project was meant to reflect a more realistic setup where code is not publicly exposed by default.</p>
+
+                <h2>Phase 3: Building the Full CI/CD Pipeline in Jenkins</h2>
+                <p>This was the most important part of the project. I built a Jenkins pipeline that covered the full delivery flow.</p>
+
+                <div class="pipeline-stages">
+                    <div class="stage"><span class="stage-num">1</span><div><strong>Git Checkout</strong><p>Pulled source code from the private GitHub repository using stored Jenkins credentials.</p></div></div>
+                    <div class="stage"><span class="stage-num">2</span><div><strong>Compile</strong><p>The application was compiled with Maven to catch syntax and build-level issues early.</p></div></div>
+                    <div class="stage"><span class="stage-num">3</span><div><strong>Test</strong><p>Unit tests were executed to validate application behavior before moving forward.</p></div></div>
+                    <div class="stage"><span class="stage-num">4</span><div><strong>Filesystem Vulnerability Scan</strong><p>Trivy scanned the project filesystem and dependency tree, exporting the report to a separate file for review and documentation.</p></div></div>
+                    <div class="stage"><span class="stage-num">5</span><div><strong>SonarQube Analysis</strong><p>Jenkins connected to SonarQube and published a quality report covering code smells, bugs, vulnerabilities, and maintainability issues.</p></div></div>
+                    <div class="stage"><span class="stage-num">6</span><div><strong>Quality Gate Check</strong><p>After analysis, the pipeline checked the quality gate before continuing — preventing poor-quality code from progressing unnoticed.</p></div></div>
+                    <div class="stage"><span class="stage-num">7</span><div><strong>Package</strong><p>The app was packaged using Maven.</p></div></div>
+                    <div class="stage"><span class="stage-num">8</span><div><strong>Publish Artifact to Nexus</strong><p>The built artifact was pushed to Nexus for proper artifact management and versioned storage.</p></div></div>
+                    <div class="stage"><span class="stage-num">9</span><div><strong>Build Docker Image</strong><p>The application was containerized using Docker.</p></div></div>
+                    <div class="stage"><span class="stage-num">10</span><div><strong>Scan Docker Image</strong><p>Trivy scanned the built image for vulnerabilities before it was published.</p></div></div>
+                    <div class="stage"><span class="stage-num">11</span><div><strong>Push Docker Image</strong><p>After the scan passed, the image was pushed to Docker Hub.</p></div></div>
+                    <div class="stage"><span class="stage-num">12</span><div><strong>Deploy to Kubernetes</strong><p>The application was deployed into the Kubernetes cluster using manifest files.</p></div></div>
+                    <div class="stage"><span class="stage-num">13</span><div><strong>Verify Deployment</strong><p>Deployment and services were verified using Kubernetes commands.</p></div></div>
+                    <div class="stage"><span class="stage-num">14</span><div><strong>Email Notification</strong><p>Jenkins sent an email notification after pipeline execution so I would know whether the build succeeded or failed without watching the job manually.</p></div></div>
+                </div>
+
+                <h3>Keeping Secrets and Access Safer</h3>
+                <p>One of the biggest lessons in this project was that automation is not enough by itself — access also has to be controlled properly. To make the Kubernetes deployment more secure, I did not just let Jenkins operate with unrestricted access. Instead, I created a dedicated service account, a role, a role binding, and a token for Jenkins authentication. This followed the principle of RBAC (role-based access control). Even in a personal project, it is a good habit to design with restricted access in mind.</p>
+
+                <h2>Phase 4: Monitoring with Prometheus and Grafana</h2>
+                <p>Once the application was deployed, I moved to monitoring. I did not want the project to stop at deployment because observability is a major part of real DevOps work.</p>
+
+                <ul>
+                    <li><strong>Prometheus</strong> — installed to scrape metrics across the infrastructure</li>
+                    <li><strong>Grafana</strong> — connected to Prometheus to visualize metrics through dashboards</li>
+                    <li><strong>Blackbox Exporter</strong> — used for website-level monitoring to track whether endpoints were reachable and how probes behaved over time</li>
+                    <li><strong>Node Exporter</strong> — used for system-level monitoring on the Jenkins server, tracking CPU usage, RAM, network activity, and host-level metrics</li>
+                </ul>
+
+                <h2>What I Learned</h2>
+                <div class="learnings">
+                    <div class="learning-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div><strong>CI/CD is more than build and deploy.</strong> A strong pipeline includes testing, quality checks, security scanning, artifact management, deployment controls, and monitoring.</div>
+                    </div>
+                    <div class="learning-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div><strong>Infrastructure decisions affect the whole workflow.</strong> Ports, instance sizes, storage, and network rules all affect how smooth the pipeline will be.</div>
+                    </div>
+                    <div class="learning-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div><strong>Security should be part of the process.</strong> Using Trivy, Kubeaudit, credentials management, tokens, and RBAC made the project much closer to real-world DevOps practice.</div>
+                    </div>
+                    <div class="learning-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div><strong>Monitoring completes the lifecycle.</strong> Deployment is not the end. Once an app is live, you need to know whether it is healthy, reachable, and performing well.</div>
+                    </div>
+                    <div class="learning-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div><strong>Documentation matters.</strong> Because this project touched so many tools, documenting architecture, setup steps, credentials flow, and pipeline design was essential.</div>
+                    </div>
+                </div>
+
+                <h2>What I Would Improve Next</h2>
+                <ul>
+                    <li>Move secrets to a more secure secret-management approach</li>
+                    <li>Improve Kubernetes ingress and external exposure</li>
+                    <li>Add branch-based pipeline behavior</li>
+                    <li>Add rollback or progressive deployment logic</li>
+                    <li>Store reports in a cleaner central location</li>
+                    <li>Use a managed Kubernetes platform for comparison against self-managed setup</li>
+                    <li>Add infrastructure as code for provisioning</li>
+                </ul>
+
+                <div class="project-footer">
+                    <a href="https://github.com/Eweka01/Boardgame" target="_blank" class="btn btn-primary">
+                        <i class="fab fa-github"></i> View Full Code & Configs on GitHub
+                    </a>
+                    <a href="/#portfolio" class="btn btn-secondary-dark">
+                        <i class="fas fa-arrow-left"></i> Back to Portfolio
+                    </a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2024 Eweka Gabriel. All rights reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#" class="footer-link">System Status</a>
+                    <a href="#" class="footer-link">Uptime</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

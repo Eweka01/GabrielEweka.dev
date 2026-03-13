@@ -435,6 +435,21 @@ section {
     object-fit: cover;
 }
 
+.portfolio-image--full img {
+    height: auto;
+    object-fit: unset;
+}
+
+.portfolio-image-link {
+    display: block;
+    text-decoration: none;
+}
+
+.portfolio-image-link:hover img {
+    opacity: 0.9;
+    transition: opacity 0.2s ease;
+}
+
 .portfolio-content {
     padding: 1.5rem;
 }
