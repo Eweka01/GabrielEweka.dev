@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Assisted SRE Workflow on AWS — Eweka Gabriel</title>
+    <meta name="description" content="Built a production-style SRE workflow on AWS using Terraform, ECS Fargate, GitHub Actions, CloudWatch, SNS, and LLM-based incident triage.">
+    <link rel="icon" href="/Asset/logo.png?v=2" type="image/png">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="project.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="/">
+                    <img src="/Asset/logo.png?v=3" alt="Eweka Gabriel logo" class="logo-img">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="/#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="/#skills" class="nav-link">Skills</a></li>
+                <li class="nav-item"><a href="/#resume" class="nav-link">Resume</a></li>
+                <li class="nav-item"><a href="/#portfolio" class="nav-link">Portfolio</a></li>
+                <li class="nav-item"><a href="/#blog" class="nav-link">Blog</a></li>
+                <li class="nav-item"><a href="/#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="project-page">
+        <!-- Hero -->
+        <section class="project-hero">
+            <div class="container">
+                <a href="/#portfolio" class="back-link">
+                    <i class="fas fa-arrow-left"></i> Back to Portfolio
+                </a>
+                <div class="project-meta">
+                    <span class="project-series">Eweka — Blueprint Series</span>
+                    <span class="project-read-time">10 min read</span>
+                </div>
+                <h1 class="project-title">How I Built an AI-Assisted SRE Workflow on AWS with Terraform, ECS Fargate, GitHub Actions, CloudWatch, and LLM-Based Incident Triage</h1>
+                <div class="project-tags">
+                    <span class="tech-tag">AWS ECS Fargate</span>
+                    <span class="tech-tag">Terraform</span>
+                    <span class="tech-tag">GitHub Actions</span>
+                    <span class="tech-tag">Docker</span>
+                    <span class="tech-tag">Amazon ECR</span>
+                    <span class="tech-tag">CloudWatch</span>
+                    <span class="tech-tag">SNS</span>
+                    <span class="tech-tag">Python Flask</span>
+                    <span class="tech-tag">OpenAI API</span>
+                </div>
+                <div class="project-actions">
+                    <a href="https://github.com/Eweka01/AI-Assisted-SRE-Workflow-on-AWS/tree/main" target="_blank" class="btn btn-primary">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                    <a href="https://medium.com/@oseweka1/how-i-built-an-ai-assisted-sre-workflow-on-aws-with-terraform-ecs-fargate-github-actions-b62fcdc62ee3" target="_blank" class="btn btn-secondary">
+                        <i class="fab fa-medium"></i> Full Documentation
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Architecture Diagram -->
+        <section class="project-diagram">
+            <div class="container">
+                <img src="../Asset/2.webp" alt="AI-Assisted SRE Workflow Architecture Diagram" class="diagram-img">
+                <p class="diagram-caption">Architecture: GitHub Actions → ECR → ECS Fargate → ALB → CloudWatch → SNS → AI Triage</p>
+            </div>
+        </section>
+
+        <!-- Content -->
+        <section class="project-content">
+            <div class="project-body">
+
+                <p class="project-intro">
+                    Modern Site Reliability Engineering is no longer just about keeping servers alive. It is about building reliable systems, automating operational workflows, improving visibility, and responding faster when incidents happen. I built a hands-on project that simulates how a junior SRE might deploy, monitor, troubleshoot, and investigate a production-style application on AWS — and added an AI layer to assist with incident triage.
+                </p>
+
+                <div class="tool-stack">
+                    <h3>Tools & Services</h3>
+                    <div class="tool-list">
+                        <span>Python Flask</span><span>Docker</span><span>Amazon ECR</span>
+                        <span>Amazon ECS Fargate</span><span>Application Load Balancer</span>
+                        <span>Terraform</span><span>GitHub Actions</span>
+                        <span>CloudWatch Logs</span><span>CloudWatch Alarms</span>
+                        <span>Amazon SNS</span><span>OpenAI API</span>
+                    </div>
+                </div>
+
+                <h2>Why I Built This</h2>
+                <p>Many SRE and DevOps roles today ask for experience with Infrastructure as Code, AWS cloud services, containers, CI/CD pipelines, monitoring, incident response, and AI-assisted operations. Instead of building separate mini-projects for each skill, I wanted one project that connected them all into a single workflow.</p>
+                <p>The goal was simple: deploy an app, monitor it, break it, detect the problem, and use AI to help triage the incident.</p>
+
+                <h2>Architecture</h2>
+                <p>Application traffic flows through a load balancer to containerized services running on ECS Fargate. Logs and metrics are continuously collected by CloudWatch. Alarms notify operators through SNS when thresholds are crossed, and an AI triage script can summarize symptoms and suggest next steps.</p>
+
+                <h2>Building the Application</h2>
+                <p>I started with a lightweight Flask application. The goal was not a feature-rich product but something simple that could support realistic operational testing. The app included several key endpoints:</p>
+                <ul>
+                    <li><code>/</code> — main application response</li>
+                    <li><code>/health</code> — health checks for the ALB</li>
+                    <li><code>/slow</code> — simulate latency</li>
+                    <li><code>/error</code> — intentionally return HTTP 500</li>
+                    <li><code>/random</code> — simulate intermittent failures</li>
+                </ul>
+                <p>These endpoints became essential later for monitoring validation and incident simulation.</p>
+
+                <h3>Containerizing with Docker</h3>
+                <p>I containerized the app using a slim Python base image with Gunicorn as the application server, making it portable and production-friendly. After building and testing the image locally, I tagged and pushed it to Amazon ECR so that ECS could pull it during deployment.</p>
+
+                <h2>Deploying to ECS Fargate</h2>
+                <p>I first deployed manually in the AWS console to troubleshoot interactively before codifying everything in Terraform. The manual setup included creating an ECS cluster and task definition, attaching it to an Application Load Balancer, and configuring CloudWatch log collection. This step already surfaced real engineering challenges.</p>
+
+                <h3>Real Troubleshooting Challenges</h3>
+                <div class="pipeline-stages">
+                    <div class="stage">
+                        <span class="stage-num">1</span>
+                        <div>
+                            <strong>ECS tried to fetch environment variables from SSM</strong>
+                            <p>APP_VERSION and APP_ENV were accidentally configured as <code>ValueFrom</code> instead of plain <code>Value</code>. ECS interpreted them as secret references. Fixed by moving them to regular environment variables.</p>
+                        </div>
+                    </div>
+                    <div class="stage">
+                        <span class="stage-num">2</span>
+                        <div>
+                            <strong>Container image architecture mismatch</strong>
+                            <p>Built on Apple Silicon (ARM), but the ECS task was configured for <code>linux/amd64</code>. Fixed by rebuilding with Docker Buildx: <code>docker buildx build --platform linux/amd64 --push</code></p>
+                        </div>
+                    </div>
+                    <div class="stage">
+                        <span class="stage-num">3</span>
+                        <div>
+                            <strong>ALB returned 504 Gateway Timeout errors</strong>
+                            <p>Root cause was network connectivity between the ALB and ECS tasks. Diagnosed by validating port 5000 access, then scoped the security group to allow port 5000 only from the ALB security group.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Converting to Terraform</h2>
+                <p>Once the manual deployment worked, I recreated the full infrastructure in Terraform. The stack provisioned:</p>
+                <ul>
+                    <li>CloudWatch log group</li>
+                    <li>ECS cluster and task definition</li>
+                    <li>IAM task execution role</li>
+                    <li>ALB and target group with health check listener</li>
+                    <li>ALB and ECS task security groups</li>
+                    <li>ECS service wired to the load balancer</li>
+                </ul>
+                <p>After <code>terraform apply</code>, the infrastructure deployed successfully. I verified it by testing <code>/health</code>, <code>/</code>, and <code>/error</code> — confirming that the Terraform-managed version was live and behaving correctly.</p>
+
+                <h2>CI/CD with GitHub Actions</h2>
+                <p>I added a GitHub Actions pipeline to automate the full delivery flow: push code → build Docker image → push to ECR → trigger ECS redeployment. AWS credentials were stored as GitHub repository secrets. After committing a visible change and pushing, I confirmed the update appeared through the ALB after the workflow completed.</p>
+
+                <h2>Monitoring & Alerting with CloudWatch and SNS</h2>
+                <p>With deployment working, I set up observability. CloudWatch Logs collected application output from ECS. An SNS topic with email subscription handled alert notifications. I created three CloudWatch alarms:</p>
+                <div class="pipeline-stages">
+                    <div class="stage">
+                        <span class="stage-num"><i class="fas fa-bell"></i></span>
+                        <div><strong>ai-sre-tf-5xx-errors</strong><p>Monitored <code>HTTPCode_Target_5XX_Count</code> — detects application-level failures.</p></div>
+                    </div>
+                    <div class="stage">
+                        <span class="stage-num"><i class="fas fa-bell"></i></span>
+                        <div><strong>ai-sre-tf-high-response-time</strong><p>Monitored <code>TargetResponseTime</code> — detects latency degradation.</p></div>
+                    </div>
+                    <div class="stage">
+                        <span class="stage-num"><i class="fas fa-bell"></i></span>
+                        <div><strong>ai-sre-tf-no-healthy-targets</strong><p>Monitored <code>HealthyHostCount</code> — detects target health degradation.</p></div>
+                    </div>
+                </div>
+
+                <h2>Simulating Incidents</h2>
+                <p>Once monitoring was in place, I validated it by triggering controlled incidents.</p>
+                <p><strong>HTTP 500 errors:</strong> Repeatedly hit <code>/error</code> 20 times, generating repeated 500 responses and triggering the 5xx alarm.</p>
+                <p><strong>Elevated response time:</strong> Repeatedly hit <code>/slow</code> 15 times, pushing average target response time above the threshold and triggering the high response time alarm.</p>
+                <p>Both alarms fired successfully and delivered email notifications through SNS — validating that the full signal pipeline was wired together correctly.</p>
+
+                <h2>AI-Assisted Incident Triage</h2>
+                <p>Instead of treating AI as a chatbot to manually ask for help, I integrated it directly into the incident workflow. I built a Python triage script that reads structured incident data and sends it to an LLM for analysis.</p>
+                <p>The incident data included: service name, environment, incident time, alarm names, symptoms, metrics, affected endpoints, recent changes, sample logs, and operational notes.</p>
+                <p>The script generates a structured triage report covering:</p>
+                <ul>
+                    <li>Incident summary</li>
+                    <li>Likely cause</li>
+                    <li>Severity assessment</li>
+                    <li>Immediate response steps</li>
+                    <li>Investigation checks</li>
+                    <li>Rollback guidance</li>
+                    <li>Draft postmortem notes</li>
+                </ul>
+                <p>The AI is not replacing observability, logs, metrics, or human judgment — it acts as a first-pass incident assistant that helps summarize the situation quickly, identifies likely causes, and reduces time to first understanding.</p>
+
+                <h2>What I Learned</h2>
+                <div class="learnings">
+                    <div class="learning-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div><strong>Infrastructure as Code is essential.</strong> Once the manual setup worked, Terraform made the environment repeatable and forced a deeper understanding of how AWS pieces actually connect.</div>
+                    </div>
+                    <div class="learning-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div><strong>Debugging is where real learning happens.</strong> The environment variable misconfiguration, image architecture mismatch, and ALB timeout taught more than a perfect first deployment would have.</div>
+                    </div>
+                    <div class="learning-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div><strong>Monitoring is only useful if you validate it.</strong> Creating alarms is not enough — you need to intentionally trigger incidents and confirm that metrics, thresholds, and notifications work end to end.</div>
+                    </div>
+                    <div class="learning-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div><strong>AI is strongest when it has structured context.</strong> The LLM became useful only after feeding it meaningful incident data — reinforcing that AI works much better when paired with good operational inputs.</div>
+                    </div>
+                    <div class="learning-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div><strong>SRE is about workflows, not isolated tools.</strong> Deployment, health checks, logs, alarms, troubleshooting, and incident response all connect into a single reliability system.</div>
+                    </div>
+                </div>
+
+                <h2>What I Would Improve Next</h2>
+                <ul>
+                    <li>Automatic rollback suggestions tied to ECS task definition revisions</li>
+                    <li>Parse CloudWatch alarm payloads directly into the triage script</li>
+                    <li>Pull recent deployment metadata into the triage context</li>
+                    <li>Generate runbooks automatically from recurring incident patterns</li>
+                </ul>
+
+                <div class="project-footer">
+                    <a href="https://github.com/Eweka01/AI-Assisted-SRE-Workflow-on-AWS/tree/main" target="_blank" class="btn btn-primary">
+                        <i class="fab fa-github"></i> View Full Code & Configs on GitHub
+                    </a>
+                    <a href="/#portfolio" class="btn btn-secondary-dark">
+                        <i class="fas fa-arrow-left"></i> Back to Portfolio
+                    </a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025 Eweka Gabriel. All rights reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#" class="footer-link">System Status</a>
+                    <a href="#" class="footer-link">Uptime</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
